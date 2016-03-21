@@ -1,0 +1,46 @@
+.Message
+  margin-top: 12px
+
+  .container-1
+    display: flex
+    align-items: flex-end
+
+    .avatar-wrapper
+      display: inline-flex
+      padding: 0 12px
+
+      .avatar
+        $size: 32px
+
+        display: flex
+        align-items: center
+        justify-content: center
+        width: $size
+        height: $size
+        margin: auto
+        border-radius: $size
+        background-color: #c8c8c8
+        text-transform: uppercase
+        font-size: 24px
+        color: white
+
+    .username
+      font-size: 12px
+
+    .content
+      display: inline-flex
+      background-color: white
+      border-radius: 10px
+      padding: 12px
+      max-width: 400px
+
+  &.current .container-1
+    flex-direction: row-reverse
+
+    .content-wrapper
+      text-align: right
+
+      .content
+        background: $primary-color
+        color: white
+

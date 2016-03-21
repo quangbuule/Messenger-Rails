@@ -1,0 +1,45 @@
+= render 'layouts/navbar'
+.container
+  h3 Let sign in to continue
+  = form_for User.new, url: log_in_path do |f|
+
+    - unless flash[:logging_in_errors].nil?
+      - flash[:logging_in_errors].each do |error|
+        .error
+          = error
+    .login-row
+      .field-wrapper
+        .input-field
+          = f.text_field :username, class: 'validate'
+          = f.label :username
+      .field-wrapper
+        .input-field
+          = f.password_field :password, class: 'validate'
+          = f.label :password
+      .login-btn-wrapper
+        button.waves-effect.waves-light.btn type="submit"
+          | Login
+
+  h4 Or sign up if you don't have any account
+  = form_for User.new do |f|
+    .row
+      .col.s8
+        - unless flash[:signing_up_errors].nil?
+          - flash[:signing_up_errors].each do |error|
+            .error
+              = error
+
+        .input-field
+          = f.text_field :username, class: 'validate'
+          = f.label :username
+        .input-field
+          = f.password_field :password, class: 'validate'
+          = f.label :password
+        .input-field
+          = f.password_field :password_confirmation, class: 'validate'
+          = f.label :password_confirmation
+        button.waves-effect.waves-light.btn type="submit"
+          | Sign up
+
+      .col.s4
+        img.asset-1 src=image_path('asset-1.png')

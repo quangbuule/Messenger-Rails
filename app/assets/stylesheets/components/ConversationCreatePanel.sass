@@ -1,0 +1,56 @@
+.ConversationCreatePanel
+  flex: 1
+  display: flex
+  flex-direction: column
+  background-color: white
+
+  .chip-container
+    padding: 12px
+
+    .chip
+      margin-right: 6px
+      cursor: pointer
+
+  .search-box
+    padding: 0 12px
+    background-color: white
+
+  .found-user-list
+    flex: 1
+    overflow: auto
+
+    .user
+      display: flex
+      align-items: center
+      height: 48px
+      padding: 0 12px
+      cursor: pointer
+
+      &:hover
+        background-color: #EEE
+
+      .avatar
+        $size: 32px
+
+        display: flex
+        align-items: center
+        justify-content: center
+        width: $size
+        height: $size
+        margin: auto
+        border-radius: $size
+        background-color: #c8c8c8
+        text-transform: uppercase
+        font-size: 18px
+        color: white
+
+      .username
+        flex: 1
+        margin-left: 12px
+
+  .actions
+    border-top: 1px solid $body-bg-color
+
+    .inner
+      margin: 12px
+      text-align: right

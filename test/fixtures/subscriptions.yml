@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  conversation_id: 
+  read: false
+  last_message_id: 1
+
+two:
+  user_id: 
+  conversation_id: 
+  read: false
+  last_message_id: 1

@@ -1,0 +1,55 @@
+.ConversationListItem
+  display: flex
+  align-items: center
+  min-height: 72px
+  cursor: pointer
+
+  .new
+    flex: 1
+    text-align: center
+
+  &:hover
+    background-color: #f5f5f5
+
+  .conversation
+    flex: 1
+    display: flex
+    align-items: center
+
+    .avatar-wrapper
+      padding: 12px
+
+      .avatar
+        $size: 48px
+
+        display: flex
+        align-items: center
+        justify-content: center
+        width: $size
+        height: $size
+        margin: auto
+        border-radius: $size
+        background-color: #c8c8c8
+        text-transform: uppercase
+        font-size: 32px
+        color: white
+
+    .right-col
+      flex: 1
+      padding-right: 12px
+      padding-top: 12px
+      padding-bottom: 12px
+
+      .header
+        display: flex
+
+        .dateline
+          margin-left: auto
+          font-size: 10px
+
+      .content
+        height: 3em
+        overflow: hidden
+
+  &.unread
+    font-weight: 500
